@@ -44,13 +44,14 @@
         x-show="isSidebarOpen || isSidebarHovered"
         class="text-sm text-gray-500"
     >
-        {{-- Dummy Links --}}
+        Page Components
     </div>
 
-    <x-sidebar.link title="Home" href="#" />
+    <x-sidebar.link title="Form" href="{{ route('form.index') }}" />
+    <x-sidebar.link title="Table" href="{{ route('table.index') }}" />
 
     {{-- @php
-        $links = array_fill(0, 5, '');
+        $links = array_fill(0, 20, '');
     @endphp
 
     @foreach ($links as $index => $link)
