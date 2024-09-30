@@ -51,5 +51,6 @@ Route::get('/buttons/text-icon', function () {
 Route::resource('products', ProductController::class);
 Route::resource('category', CategoryController::class);
 Route::get('/dashboard/product/delete/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
-Route::get('/dashboard/edit/product/{id}', [ProductController::class, 'edit'])->name('product.edit');
+// Route::get('/dashboard/edit/product/{id}', [ProductController::class, 'edit'])->name('product.edit');
+Route::get('/dashboard/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
 require __DIR__ . '/auth.php';

@@ -16,29 +16,29 @@
                     {{ session('error') }}
                 </div>
             @endif
+
+
+            {{-- @yield('profile.add_products') --}}
+
+
             <div class="d-flex justify-content-between mb-3">
                 <div>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_product">
                         Add
                     </button>
 
-                    <!-- Modal -->
                     <div class="modal fade" id="add_product" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable">
-                            <form action="{{ route('products.store') }}" method="POST">
-                                @csrf
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add a new product</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <form action="{{ route('products.store') }}" method="POST">
+                                    @csrf
                                     <div class="container mt-5">
-
-
-
-
                                         <div class="mb-3">
                                             <label>Category *</label>
                                             <select name = "category_id" id="category_id"
@@ -81,13 +81,19 @@
                                         <button type="submit" class="btn btn-primary">Add</button>
                                     </div>
 
-                                </div>
-                            </form>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
+                    <!-- Modal -->
+                    {{-- @yield('profile.add_products') --}}
+
 
                 </div>
             </div>
+
+
             <table class="table table-bordered" id="product_table">
                 <thead>
                     <tr>
