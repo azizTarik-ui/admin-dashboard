@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TableController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +48,8 @@ Route::get('/buttons/text-icon', function () {
 })->middleware(['auth'])->name('buttons.text-icon');
 
 
-Route::resource('table', TableController::class);
-Route::resource('form', FormController::class);
-
+Route::resource('products', ProductController::class);
+Route::resource('category', CategoryController::class);
+Route::get('/dashboard/product/delete/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
+Route::get('/dashboard/edit/product/{id}', [ProductController::class, 'edit'])->name('product.edit');
 require __DIR__ . '/auth.php';

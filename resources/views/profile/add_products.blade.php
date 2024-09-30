@@ -2,13 +2,13 @@
     <x-slot name="header">
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
-                {{ __('Form') }}
+                {{ __('Add New Product') }}
             </h2>
 
         </div>
         <div class="container mt-5">
 
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('products.store') }}" method="POST">
                 @csrf
 
                 {{-- @php
@@ -17,16 +17,17 @@
 
                 <div class="mb-3">
                     <label>Category *</label>
-                    <select name = "category_id" id="category_id" class="form-control selectpicker" required>
+                    <select name = "category_id" id="category_id" class="form-control selectpicker" data-live-search="true"
+                        required>
                         <option value="">Select One</option>
-                        <option value="">Monitor</option>
-                        <option value="">CPU</option>
-                        <option value="">GPU</option>
-                        <option value="">RAM</option>
-                        <option value="">Motherboard</option>
+                        @if (!@empty($categories))
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        @endif
                     </select>
                 </div>
-                <div class="mb-3 sub_cat_div">
+                {{-- <div class="mb-3 sub_cat_div">
                     <label>Sub-Category</label>
                     <select name = "sub_category_id" id="sub_category_id" class="form-control">
                         <option value="">Select One</option>
@@ -36,7 +37,7 @@
                         <option value="">Corsair</option>
                         <option value="">Gigabyte</option>
                     </select>
-                </div>
+                </div> --}}
 
 
                 <div class="mb-3">

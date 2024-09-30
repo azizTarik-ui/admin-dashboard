@@ -1,12 +1,7 @@
 <x-app-layout>
-
-
+    
     <x-slot name="header">
-
-        {{-- <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-            {{ __("You're logged in!") }}
-        </div> --}}
-
+        
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Dashboard') }}
@@ -131,11 +126,8 @@
                                     class="w-12 h-6 transition rounded-full outline-none bg-primary-100 dark:bg-primary-darker">
                                 </div>
                                 <div class="absolute top-0 left-0 inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform scale-110 rounded-full shadow-sm translate-x-0 bg-white dark:bg-primary-100"
-                                    :class="{
-                                        'translate-x-0  bg-white dark:bg-primary-100': !
-                                            isOn,
-                                        'translate-x-6 bg-primary-light dark:bg-primary': isOn
-                                    }">
+                                    :class="{ 'translate-x-0  bg-white dark:bg-primary-100': !
+                                        isOn, 'translate-x-6 bg-primary-light dark:bg-primary': isOn }">
                                 </div>
                             </button>
                         </div>
@@ -168,11 +160,8 @@
                                     class="w-12 h-6 transition rounded-full outline-none bg-primary-100 dark:bg-primary-darker">
                                 </div>
                                 <div class="absolute top-0 left-0 inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform scale-110 rounded-full shadow-sm translate-x-0 bg-white dark:bg-primary-100"
-                                    :class="{
-                                        'translate-x-0  bg-white dark:bg-primary-100': !
-                                            isOn,
-                                        'translate-x-6 bg-primary-light dark:bg-primary': isOn
-                                    }">
+                                    :class="{ 'translate-x-0  bg-white dark:bg-primary-100': !
+                                        isOn, 'translate-x-6 bg-primary-light dark:bg-primary': isOn }">
                                 </div>
                             </button>
                         </div>
@@ -234,11 +223,8 @@
                                     class="w-12 h-6 transition rounded-full outline-none bg-primary-100 dark:bg-primary-darker">
                                 </div>
                                 <div class="absolute top-0 left-0 inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform scale-110 rounded-full shadow-sm translate-x-0 bg-white dark:bg-primary-100"
-                                    :class="{
-                                        'translate-x-0  bg-white dark:bg-primary-100': !
-                                            isOn,
-                                        'translate-x-6 bg-primary-light dark:bg-primary': isOn
-                                    }">
+                                    :class="{ 'translate-x-0  bg-white dark:bg-primary-100': !
+                                        isOn, 'translate-x-6 bg-primary-light dark:bg-primary': isOn }">
                                 </div>
                             </button>
                         </div>
@@ -260,7 +246,6 @@
                 </div>
             </div>
         </div>
-
     </x-slot>
 
 

@@ -47,8 +47,10 @@
         Page Components
     </div>
 
-    <x-sidebar.link title="Form" href="{{ route('form.index') }}" />
-    <x-sidebar.link title="Table" href="{{ route('table.index') }}" />
+    <x-sidebar.link title="Category" href="{{ route('category.index') }}" />
+    <x-sidebar.link title="Add Category" href="{{ route('category.create') }}" />
+    <x-sidebar.link title="Products" href="{{ route('products.index') }}" />
+    <x-sidebar.link title="Add Products" href="{{ route('products.create') }}" />
 
     {{-- @php
         $links = array_fill(0, 20, '');
