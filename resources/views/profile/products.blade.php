@@ -29,7 +29,7 @@
 
                     <div class="modal fade" id="add_product" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-dialog modal-dialog-scrollable modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Add a new product</h1>
@@ -135,7 +135,7 @@
                                 <!-- Modal -->
                                 <div class="modal fade" id="edit_product{{ $product->id }}" tabindex="-1"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-xl">
                                         <form action="{{ route('products.update', $product->id) }}" method="POST">
                                             @method('put')
                                             @csrf
