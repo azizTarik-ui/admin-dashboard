@@ -137,39 +137,7 @@
                 </tbody>
             </table>
         </div>
-        {{-- <div class="modal fade" id="category_import_modal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close bg-dark" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="{{ route('import_category') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="modal-body">
-                        <label class="form-label">Demo File</label>
-                        <a class="btn btn-primary" href="{{ asset('category_sample.csv') }}" role="button">Download</a>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Upload .xlsx/.csv files only</label>
-                            <input type="file" name="file" class="form-control" name="excel" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> --}}
-
-        <!-- jQuery -->
-        {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> --}}
+        
 
         <!-- Initialize DataTable -->
         <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
@@ -181,12 +149,5 @@
         <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script>
 
 
-        {{-- <script>
-        $('#category_table').DataTable({
-            buttons: [
-                'copy', 'excel', 'pdf'
-            ]
-        });
-    </script> --}}
     </x-slot>
 </x-app-layout>
