@@ -71,7 +71,11 @@
                         <tr>
                             <td>{{ ++$key }}</td>
                             <td>{{ $category->name }}</td>
-                            <td class="btn-group">
+                            <td>
+                                {{-- <button class="btn btn-warning" onclick="editProduct({{ $product }})"
+                                    data-toggle="modal" data-target="#edit_product">Edit</button> --}}
+
+                                <!-- Button trigger modal -->
                                 <button class="btn btn-warning" type="button" class="btn btn-primary"
                                     data-bs-toggle="modal" data-bs-target="#edit_category{{ $category->id }}">
                                     Edit
@@ -86,7 +90,7 @@
                                             @csrf
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Category
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Product
                                                     </h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
@@ -98,13 +102,14 @@
                                                             <p class="alert alert-danger">{{ $error }}</p>
                                                         @endforeach
                                                     @endif
-
+                                                    
                                                     <div class="mb-3">
-                                                        <label class="form-label">Name</label>
+                                                        <label class="form-label">Name *</label>
                                                         <input type="text" value="{{ $category->name }}"
                                                             name="name" class="form-control" value="">
                                                     </div>
-
+                                                    
+                                                   
 
                                                 </div>
                                                 <div class="modal-footer">
@@ -118,8 +123,12 @@
                                         </form>
                                     </div>
                                 </div>
+
+
+
                                 <a href="{{ route('category.destroy', $category->id) }}"
-                                    onclick="return confirm('Are You Sure?')"class="btn btn-danger">Delete</a>
+                                    onclick="return confirm('Are You Sure?')" class="btn btn-danger">Delete</a>
+
                             </td>
                         </tr>
                     @endforeach
